@@ -1,0 +1,27 @@
+C:\Users\Oni\source\repos\Intersect Admin\Intersect Admin\bin\Debug\Intersect Admin.exe.config
+C:\Users\Oni\source\repos\Intersect Admin\Intersect Admin\bin\Debug\Intersect Admin.exe
+C:\Users\Oni\source\repos\Intersect Admin\Intersect Admin\bin\Debug\Intersect Admin.pdb
+C:\Users\Oni\source\repos\Intersect Admin\Intersect Admin\bin\Debug\Intersect Admin.xml
+C:\Users\Oni\source\repos\Intersect Admin\Intersect Admin\obj\Debug\Intersect Admin.vbprojAssemblyReference.cache
+C:\Users\Oni\source\repos\Intersect Admin\Intersect Admin\obj\Debug\Intersect_Admin.Resources.resources
+C:\Users\Oni\source\repos\Intersect Admin\Intersect Admin\obj\Debug\Intersect Admin.vbproj.GenerateResource.cache
+C:\Users\Oni\source\repos\Intersect Admin\Intersect Admin\obj\Debug\Intersect Admin.vbproj.CoreCompileInputs.cache
+C:\Users\Oni\source\repos\Intersect Admin\Intersect Admin\obj\Debug\Intersect Admin.exe
+C:\Users\Oni\source\repos\Intersect Admin\Intersect Admin\obj\Debug\Intersect Admin.xml
+C:\Users\Oni\source\repos\Intersect Admin\Intersect Admin\obj\Debug\Intersect Admin.pdb
+C:\Users\Oni\source\repos\Intersect Admin\Intersect Admin\obj\Debug\Intersect_Admin.FormMain.resources
+C:\Users\Oni\source\repos\Intersect Admin\Intersect Admin\obj\Debug\Intersect Admin.vbproj.CopyComplete
+C:\Users\Oni\source\repos\Intersect Admin\Intersect Admin\bin\Debug\ChilkatDotNet47.dll
+C:\Users\Oni\source\repos\Intersect Admin\Intersect Admin\bin\Debug\EntityFramework.dll
+C:\Users\Oni\source\repos\Intersect Admin\Intersect Admin\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Oni\source\repos\Intersect Admin\Intersect Admin\bin\Debug\System.Data.SQLite.dll
+C:\Users\Oni\source\repos\Intersect Admin\Intersect Admin\bin\Debug\System.Data.SQLite.EF6.dll
+C:\Users\Oni\source\repos\Intersect Admin\Intersect Admin\bin\Debug\System.Data.SQLite.Linq.dll
+C:\Users\Oni\source\repos\Intersect Admin\Intersect Admin\bin\Debug\EntityFramework.xml
+C:\Users\Oni\source\repos\Intersect Admin\Intersect Admin\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Oni\source\repos\Intersect Admin\Intersect Admin\bin\Debug\System.Data.SQLite.xml
+C:\Users\Oni\source\repos\Intersect Admin\Intersect Admin\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Oni\source\repos\Intersect Admin\Intersect Admin\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Oni\source\repos\Intersect Admin\Intersect Admin\obj\Debug\Intersect_Admin.FormLogin.resources
+C:\Users\Oni\source\repos\Intersect Admin\Intersect Admin\obj\Debug\Intersect_Admin.FormDebug.resources
+C:\Users\Oni\source\repos\Intersect Admin\Intersect Admin\obj\Debug\Intersect_Admin.FormSettings.resources
