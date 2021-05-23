@@ -40,6 +40,7 @@ Partial Class FormMain
         Me.NsTheme1 = New Intersect_Admin.NSTheme()
         Me.NsTabControl1 = New Intersect_Admin.NSTabControl()
         Me.DashTab = New System.Windows.Forms.TabPage()
+        Me.NsButton3 = New Intersect_Admin.NSButton()
         Me.NsGroupBox4 = New Intersect_Admin.NSGroupBox()
         Me.RankTable = New Intersect_Admin.NSListView()
         Me.RankingContextMenu = New Intersect_Admin.NSContextMenu()
@@ -252,7 +253,6 @@ Partial Class FormMain
         Me.NsRandomPool1 = New Intersect_Admin.NSRandomPool()
         Me.NsControlButton1 = New Intersect_Admin.NSControlButton()
         Me.ChatMessageColorDialog = New System.Windows.Forms.ColorDialog()
-        Me.NsButton3 = New Intersect_Admin.NSButton()
         Me.NsTheme1.SuspendLayout()
         Me.NsTabControl1.SuspendLayout()
         Me.DashTab.SuspendLayout()
@@ -384,6 +384,14 @@ Partial Class FormMain
         Me.DashTab.Size = New System.Drawing.Size(682, 537)
         Me.DashTab.TabIndex = 0
         Me.DashTab.Text = "Dashboard"
+        '
+        'NsButton3
+        '
+        Me.NsButton3.Location = New System.Drawing.Point(618, 6)
+        Me.NsButton3.Name = "NsButton3"
+        Me.NsButton3.Size = New System.Drawing.Size(58, 23)
+        Me.NsButton3.TabIndex = 12
+        Me.NsButton3.Text = "Settings"
         '
         'NsGroupBox4
         '
@@ -1673,7 +1681,7 @@ Partial Class FormMain
         '
         Me.DmUsername.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.DmUsername.Location = New System.Drawing.Point(3, 33)
-        Me.DmUsername.MaxLength = 5
+        Me.DmUsername.MaxLength = 50
         Me.DmUsername.Multiline = False
         Me.DmUsername.Name = "DmUsername"
         Me.DmUsername.ReadOnly = False
@@ -3087,14 +3095,6 @@ Partial Class FormMain
         Me.NsControlButton1.Size = New System.Drawing.Size(18, 20)
         Me.NsControlButton1.TabIndex = 0
         Me.NsControlButton1.Text = "NsControlButton1"
-        '
-        'NsButton3
-        '
-        Me.NsButton3.Location = New System.Drawing.Point(618, 6)
-        Me.NsButton3.Name = "NsButton3"
-        Me.NsButton3.Size = New System.Drawing.Size(58, 23)
-        Me.NsButton3.TabIndex = 12
-        Me.NsButton3.Text = "Settings"
         '
         'FormMain
         '

@@ -5,6 +5,9 @@ Public Class FormLogin
     Dim passvisible As Boolean = False
 
     Private Sub LoginButton_Click(sender As Object, e As EventArgs) Handles LoginButton.Click
+        LoginNotice.Text = "Loading application..."
+        LoginNotice.Refresh()
+
         Dim baseurl As String = "http://" & My.Settings.server & ":" & My.Settings.port
 
         Dim username As String = UsernameTextbox.Text
@@ -47,6 +50,7 @@ Public Class FormLogin
             Dim ServerStatsPull As New ServerStats
             ServerStatsPull = JsonConvert.DeserializeObject(Of ServerStats)(sendGetRequest(baseurl & "/api/v1/info/stats"))
             LoginNotice.Text = "Server stats pulled."
+            LoginNotice.Refresh()
 
             Dim gameobj As New Chilkat.JsonObject
             gameobj.AddIntAt(-1, "page", 0)
@@ -56,85 +60,104 @@ Public Class FormLogin
             Dim ServerMapsPull As New GameObjectsMap
             ServerMapsPull = JsonConvert.DeserializeObject(Of GameObjectsMap)(sendPostRequestWithAuth(mapjsontext, baseurl & "/api/v1/gameobjects/map"))
             LoginNotice.Text = "Map count pulled."
+            LoginNotice.Refresh()
 
             Dim npcjsontext As String = gameobj.Emit
             Dim ServerNpcPull As New GameObjectsNpc
             ServerNpcPull = JsonConvert.DeserializeObject(Of GameObjectsNpc)(sendPostRequestWithAuth(npcjsontext, baseurl & "/api/v1/gameobjects/npc"))
             LoginNotice.Text = "NPC count pulled."
+            LoginNotice.Refresh()
 
             Dim questjsontext As String = gameobj.Emit
             Dim ServerQuestPull As New GameObjectsQuest
             ServerQuestPull = JsonConvert.DeserializeObject(Of GameObjectsQuest)(sendPostRequestWithAuth(questjsontext, baseurl & "/api/v1/gameobjects/quest"))
             LoginNotice.Text = "Quest count pulled."
+            LoginNotice.Refresh()
 
             Dim animationjsontext As String = gameobj.Emit
             Dim ServerAnimationPull As New GameObjectsAnimation
             ServerAnimationPull = JsonConvert.DeserializeObject(Of GameObjectsAnimation)(sendPostRequestWithAuth(animationjsontext, baseurl & "/api/v1/gameobjects/animation"))
             LoginNotice.Text = "Animation count pulled."
+            LoginNotice.Refresh()
 
             Dim classjsontext As String = gameobj.Emit
             Dim ServerClassPull As New GameObjectsClass
             ServerClassPull = JsonConvert.DeserializeObject(Of GameObjectsClass)(sendPostRequestWithAuth(classjsontext, baseurl & "/api/v1/gameobjects/class"))
             LoginNotice.Text = "Class count pulled."
+            LoginNotice.Refresh()
 
             Dim itemjsontext As String = gameobj.Emit
             Dim ServerItemPull As New GameObjectsItem
             ServerItemPull = JsonConvert.DeserializeObject(Of GameObjectsItem)(sendPostRequestWithAuth(itemjsontext, baseurl & "/api/v1/gameobjects/item"))
             LoginNotice.Text = "Item count pulled."
+            LoginNotice.Refresh()
 
             Dim projectilejsontext As String = gameobj.Emit
             Dim ServerProjectilePull As New GameObjectsProjectile
             ServerProjectilePull = JsonConvert.DeserializeObject(Of GameObjectsProjectile)(sendPostRequestWithAuth(projectilejsontext, baseurl & "/api/v1/gameobjects/projectile"))
             LoginNotice.Text = "Projectile count pulled."
+            LoginNotice.Refresh()
 
             Dim resourcejsontext As String = gameobj.Emit
             Dim ServerResourcePull As New GameObjectsResource
             ServerResourcePull = JsonConvert.DeserializeObject(Of GameObjectsResource)(sendPostRequestWithAuth(resourcejsontext, baseurl & "/api/v1/gameobjects/resource"))
             LoginNotice.Text = "Resource count pulled."
+            LoginNotice.Refresh()
 
             Dim shopjsontext As String = gameobj.Emit
             Dim ServerShopPull As New GameObjectsShop
             ServerShopPull = JsonConvert.DeserializeObject(Of GameObjectsShop)(sendPostRequestWithAuth(shopjsontext, baseurl & "/api/v1/gameobjects/shop"))
             LoginNotice.Text = "Shop count pulled."
+            LoginNotice.Refresh()
 
             Dim spelljsontext As String = gameobj.Emit
             Dim ServerSpellPull As New GameObjectsSpell
             ServerSpellPull = JsonConvert.DeserializeObject(Of GameObjectsSpell)(sendPostRequestWithAuth(spelljsontext, baseurl & "/api/v1/gameobjects/spell"))
             LoginNotice.Text = "Spell count pulled."
+            LoginNotice.Refresh()
 
             Dim crafttablejsontext As String = gameobj.Emit
             Dim ServerCraftTablePull As New GameObjectsCraftTables
             ServerCraftTablePull = JsonConvert.DeserializeObject(Of GameObjectsCraftTables)(sendPostRequestWithAuth(crafttablejsontext, baseurl & "/api/v1/gameobjects/crafttables"))
             LoginNotice.Text = "Craft Table count pulled."
+            LoginNotice.Refresh()
 
             Dim craftjsontext As String = gameobj.Emit
             Dim ServerCraftPull As New GameObjectsCrafts
             ServerCraftPull = JsonConvert.DeserializeObject(Of GameObjectsCrafts)(sendPostRequestWithAuth(craftjsontext, baseurl & "/api/v1/gameobjects/crafts"))
             LoginNotice.Text = "Crafts count pulled."
+            LoginNotice.Refresh()
 
             Dim eventjsontext As String = gameobj.Emit
             Dim ServerEventPull As New GameObjectsEvent
             ServerEventPull = JsonConvert.DeserializeObject(Of GameObjectsEvent)(sendPostRequestWithAuth(eventjsontext, baseurl & "/api/v1/gameobjects/event"))
             LoginNotice.Text = "Event count pulled."
+            LoginNotice.Refresh()
 
             Dim playervarjsontext As String = gameobj.Emit
             Dim ServerPlayerVarPull As New GameObjectsPlayerVar
             ServerPlayerVarPull = JsonConvert.DeserializeObject(Of GameObjectsPlayerVar)(sendPostRequestWithAuth(playervarjsontext, baseurl & "/api/v1/gameobjects/playervariable"))
             LoginNotice.Text = "Player Variable count pulled."
+            LoginNotice.Refresh()
 
             Dim servervarjsontext As String = gameobj.Emit
             Dim ServerServerVarPull As New GameObjectsServerVar
             ServerServerVarPull = JsonConvert.DeserializeObject(Of GameObjectsServerVar)(sendPostRequestWithAuth(servervarjsontext, baseurl & "/api/v1/gameobjects/servervariable"))
             LoginNotice.Text = "Server Variable count pulled."
+            LoginNotice.Refresh()
 
             Dim tilesetjsontext As String = gameobj.Emit
             Dim ServerTilesetPull As New GameObjectsServerTileset
             ServerTilesetPull = JsonConvert.DeserializeObject(Of GameObjectsServerTileset)(sendPostRequestWithAuth(tilesetjsontext, baseurl & "/api/v1/gameobjects/tileset"))
             LoginNotice.Text = "Tileset count pulled."
+            LoginNotice.Refresh()
 
             For i As Integer = 0 To ServerMapsPull.count - 1
                 Dim ServerMapDetailsPull As New GameObjectsMapDetails
                 ServerMapDetailsPull = JsonConvert.DeserializeObject(Of GameObjectsMapDetails)(sendGetRequest(baseurl & "/api/v1/gameobjects/map/" & ServerMapsPull.entries(i).Key))
+
+                LoginNotice.Text = "Loading map: " & ServerMapDetailsPull.Name
+                LoginNotice.Refresh()
 
                 FormMain.WarpMapList.Items.Add(ServerMapDetailsPull.Name)
                 FormMain.ChatMaps.Items.Add(ServerMapDetailsPull.Name)
@@ -142,6 +165,7 @@ Public Class FormLogin
                 FormMain.ChatMaps.SelectedIndex = 0
             Next
             LoginNotice.Text = "Maps updated."
+            LoginNotice.Refresh()
 
             Dim RankPull As String = sendGetRequest(baseurl & "/api/v1/players/rank?page=0&pageSize=10&sortDirection=Descending")
             Dim jsonstringformat As String = JValue.Parse(RankPull).ToString(Formatting.Indented)
@@ -151,16 +175,19 @@ Public Class FormLogin
                 PlayerRankPull = JsonConvert.DeserializeObject(Of ListPlayers)(RankPull)
 
                 For i As Integer = 0 To PlayerRankPull.Count - 1
+                    LoginNotice.Text = "Loading rank: " & PlayerRankPull.Values(i).Name
+                    LoginNotice.Refresh()
                     FormMain.RankTable.AddItem(i + 1, PlayerRankPull.Values(i).Level, PlayerRankPull.Values(i).Name)
                 Next
                 LoginNotice.Text = "Rankings updated."
+                LoginNotice.Refresh()
             End If
-
-            LoginNotice.Text = "Login Success: Token expires in " & t.Minutes & " minutes."
 
             Dim ServerConfigPull As New ServerConfig
             ServerConfigPull = JsonConvert.DeserializeObject(Of ServerConfig)(sendGetRequest(baseurl & "/api/v1/info/config"))
-            LoginNotice.Text = "Server configuration pulled."
+
+            LoginNotice.Text = "Login Success: Token expires in " & t.Minutes & " minutes."
+            LoginNotice.Refresh()
 
             My.Settings.maxstat = ServerConfigPull.Player.MaxStat
             My.Settings.maxbank = ServerConfigPull.Player.MaxBank

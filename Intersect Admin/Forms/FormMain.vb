@@ -346,19 +346,37 @@ Public Class FormMain
             Dim jsontext As String = jsonobj.Emit
             Dim requestResp As String
             If DmCheckbox.Checked Then
-                requestResp = sendPostRequestWithAuth(jsontext, baseurl & "/api/v1/chat/direct/" & DmUsername.Text)
+                If DmUsername.Text <> "" Then
+                    requestResp = sendPostRequestWithAuth(jsontext, baseurl & "/api/v1/chat/direct/" & DmUsername.Text)
+                    Dim jsonstringformat As String = JValue.Parse(requestResp).ToString(Formatting.Indented)
+                    FormDebug.DebugText.Text = jsonstringformat
+                    If requestResp.Contains("true") Then
+                        ChatStatus.Text = "Message Sent: " & gMessage
+                        ChatMapCheck.Checked = False
+                        DmCheckbox.Checked = False
+                    End If
+                Else
+                    ChatStatus.Text = "Please enter a player name."
+                End If
             ElseIf ChatMapCheck.Checked Then
                 Dim mapid As String = MapName2ID(ChatMaps.Text)
                 requestResp = sendPostRequestWithAuth(jsontext, baseurl & "/api/v1/chat/proximity/" & mapid)
+                Dim jsonstringformat As String = JValue.Parse(requestResp).ToString(Formatting.Indented)
+                FormDebug.DebugText.Text = jsonstringformat
+                If requestResp.Contains("true") Then
+                    ChatStatus.Text = "Message Sent: " & gMessage
+                    ChatMapCheck.Checked = False
+                    DmCheckbox.Checked = False
+                End If
             Else
                 requestResp = sendPostRequestWithAuth(jsontext, baseurl & "/api/v1/chat/global")
-            End If
-            Dim jsonstringformat As String = JValue.Parse(requestResp).ToString(Formatting.Indented)
-            FormDebug.DebugText.Text = jsonstringformat
-            If requestResp.Contains("true") Then
-                ChatStatus.Text = "Message Sent: " & gMessage
-                ChatMapCheck.Checked = False
-                DmCheckbox.Checked = False
+                Dim jsonstringformat As String = JValue.Parse(requestResp).ToString(Formatting.Indented)
+                FormDebug.DebugText.Text = jsonstringformat
+                If requestResp.Contains("true") Then
+                    ChatStatus.Text = "Message Sent: " & gMessage
+                    ChatMapCheck.Checked = False
+                    DmCheckbox.Checked = False
+                End If
             End If
         Catch ex As Exception
             ChatStatus.Text = "You're sending messages to fast."
