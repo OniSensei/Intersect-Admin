@@ -191,6 +191,7 @@ Public Class FormLogin
             FormMain.PlayerVarCount.Value2 = ServerPlayerVarPull.total
             FormMain.ServerVarCount.Value2 = ServerServerVarPull.total
             FormMain.TilesetsCount.Value2 = ServerTilesetPull.total
+            FormMain.ClassesCount.Value2 = ServerClassPull.total
             FormMain.CpuUsage.Value = GetServerCpuPerformance()
 
             FormMain.RefreshTimer.Start()
@@ -206,7 +207,7 @@ Public Class FormLogin
             UsernameTextbox.Text = My.Settings.username
             PasswordTextbox.Text = My.Settings.password
         End If
-        FormDebug.Show()
+        'FormDebug.Show()
     End Sub
 
     Private Sub NsOnOffBox1_CheckedChanged(sender As Object) Handles NsOnOffBox1.CheckedChanged
