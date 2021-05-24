@@ -68,6 +68,8 @@ The Intersect Admin Editor was made for my personal use, but I decided to share 
 
 [![Folder Preview][folder-preview]](https://imgur.com/jAAJJU4.png)
 
+Additionally, because this application uses the API and enables you to edit the users password and email without knowing their current password you will have to grant yourself API privlidges before logging in. Follow the steps in <a href="hhttps://docs.freemmorpgmaker.com/en-US/api/v1/">Intersect Documentation</a>.
+
 Some things you can do with this tool:
 * See a list of online players
 
