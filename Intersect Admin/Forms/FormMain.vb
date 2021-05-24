@@ -550,6 +550,8 @@ Public Class FormMain
                 For i As Integer = 0 To infoPull.count - 1
                     OnlinePlayersContext.Items.Add(infoPull.entries(i).Name, My.Resources.Online)
                 Next
+
+                OnlinePlayers.Value = infoPull.count
                 DashboardStatus.Text = "Players online refreshed."
             End If
         Catch ex As Exception
