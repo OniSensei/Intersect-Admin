@@ -30,7 +30,7 @@
   <h3 align="center">Intersect Admin Editor</h3>
 
   <p align="center">
-    An admin tool for the <a href="https://github.com/AscensionGameDev/Intersect-Engine">Intersect 2D MMORPG Engine</a>. Allows users to administrate their server without having to load the game client. This tool also provides additional information regarding the server itself. This tool utilizes the <a href="hhttps://docs.freemmorpgmaker.com/en-US/api/v1/">API/a>.
+    An admin tool for the <a href="https://github.com/AscensionGameDev/Intersect-Engine">Intersect 2D MMORPG Engine</a>. Allows users to administrate their server without having to load the game client. This tool also provides additional information regarding the server itself. This tool utilizes the <a href="hhttps://docs.freemmorpgmaker.com/en-US/api/v1/">API</a>.
     <br />
     <br />
     <a href="https://github.com/OniSensei/Intersect-Admin/issues">Report Bug</a>
